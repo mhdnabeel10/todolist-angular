@@ -1,0 +1,13 @@
+<div class="main">
+    <input type="text" #todoTask placeholder="Enter Your Tasks ">
+    <button (click)="addTask(todoTask.value); todoTask.value=''">Add Task</button>
+</div>
+<div class="list">
+  <ul>
+    <li *ngFor="let task of todoList">{{ task.task }}
+      <button class="dlt-btn" (click)="deleteTask(task.id)">delete</button>
+    </li>
+  </ul>
+</div>
+
+
